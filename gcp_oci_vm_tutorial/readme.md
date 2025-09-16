@@ -1,8 +1,8 @@
 # VM Lifecycle on GCP and OCI — Tutorial
 
 ## Video
-GCP/Zoom: <zoom/gcp_create_start_stop_delete_tutorial.mp4>
-OCI/Zoom: <zoom/oci_create_start_stop_tutorial.mp4>
+GCP/Zoom: <https://github.com/y0y0l0/HHA504/blob/main/gcp_oci_vm_tutorial/zoom/gcp_create_start_stop_delete_tutorial.mp4>
+OCI/Zoom: <https://github.com/y0y0l0/HHA504/blob/main/gcp_oci_vm_tutorial/zoom/oci_create_start_stop_delete_tutorial.mp4>
 
 ## Prereqs
 - Cloud access to GCP and OCI
