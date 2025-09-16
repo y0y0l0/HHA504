@@ -1,8 +1,8 @@
 # VM Lifecycle on GCP and OCI — Tutorial
 
 ## Video
-GCP/Zoom: <zoom\gcp_create_start_stop_delete_tutorial.mp4>
-OCI/Zoom: <zoom\oci_create_start_stop_tutorial.mp4>
+GCP/Zoom: <zoom/gcp_create_start_stop_delete_tutorial.mp4>
+OCI/Zoom: <zoom/oci_create_start_stop_tutorial.mp4>
 
 ## Prereqs
 - Cloud access to GCP and OCI
@@ -21,18 +21,18 @@ OCI/Zoom: <zoom\oci_create_start_stop_tutorial.mp4>
 7. Network: <default IPv4(10.128.0.0/20); default VPC; ephemeral public IP>
 8. SSH: <allow OS Login; run sudo apt update on first login>
 
-![GCP create](images\gcp\gcp_create.png)
+![GCP create](images/gcp/gcp_create.png)
 
 ### Start/Stop
 - Start: <state shows RUNNING>
 - Stop: <state shows TERMINATED/STOPPED>
 
-![GCP running](images\gcp\gcp_running.png)
+![GCP running](images/gcp/gcp_running.png)
 
 ### Delete
 - Delete instance and verify no disks/IPs remain
 
-![GCP cleaned](images\gcp\gcp_clean.png)
+![GCP cleaned](images/gcp/gcp_clean.png)
 
 ---
 
