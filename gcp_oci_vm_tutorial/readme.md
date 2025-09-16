@@ -1,7 +1,8 @@
 # VM Lifecycle on GCP and OCI — Tutorial
 
 ## Video
-Loom/Zoom: <paste link>
+GCP/Zoom: <zoom\gcp_create_start_stop_delete_tutorial.mp4>
+OCI/Zoom: <zoom\oci_create_start_stop_tutorial.mp4>
 
 ## Prereqs
 - Cloud access to GCP and OCI
@@ -11,25 +12,27 @@ Loom/Zoom: <paste link>
 
 ## Google Cloud (GCP)
 ### Create
-1. Console → Compute Engine → Create instance
-2. Region/zone: <your choice>
-3. Machine type: <smallest available/free-eligible>
-4. Image: Ubuntu LTS
-5. Boot disk: default minimal
-6. Network: default VPC; ephemeral public IP
+1. Hamburger navigation menu → Compute Engine → VM instances → Create Instance
+2. Region/zone: <lowest cost zone -us-central1 (Iowa)>
+3. Machine type: <smallest available/free-eligible - e2-micro 0.25-2 vCPU (1 shared core), 1 GB RAM>
+4. vCPUs to core ratio: <two vCPUs per core>
+5. Operating System and Storage: <Ubuntu 24.04 LTS Minimal; default 10 GB standard persistent disk>
+6. Boot disk: <Balanced persistent disk; default minimal size>
+7. Network: <default IPv4(10.128.0.0/20); default VPC; ephemeral public IP>
+8. SSH: <allow OS Login; run sudo apt update on first login>
 
-![GCP create](images/gcp_create.png)
+![GCP create](images\gcp\gcp_create.png)
 
 ### Start/Stop
 - Start: <state shows RUNNING>
 - Stop: <state shows TERMINATED/STOPPED>
 
-![GCP running](images/gcp_running.png)
+![GCP running](images\gcp\gcp_running.png)
 
 ### Delete
 - Delete instance and verify no disks/IPs remain
 
-![GCP cleaned](images/gcp_clean.png)
+![GCP cleaned](images\gcp\gcp_clean.png)
 
 ---
 
