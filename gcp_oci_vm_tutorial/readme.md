@@ -74,4 +74,4 @@
 - <Pricing models and free tier limits vary, with OCI often providing more generous resources and lower costs for VMs>
 
 ### Preference (OCI vs GCP) and Why
-- <I prefer OCI for its cost-effectiveness and deeper enterprise customization options, but GCP's user-friendly interface and advanced global network make it ideal for rapid development and AI workloads.>
+- <I prefer OCI for its cost-effectiveness and deeper enterprise customization options, but GCP's user-friendly interface and advanced global network make it ideal for rapid development and AI workloads. GCP has better response times with start/stop operations. and the SSH experience is seamless.>
