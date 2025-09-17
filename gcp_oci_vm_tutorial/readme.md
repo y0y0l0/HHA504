@@ -50,9 +50,10 @@
 
 ### Start/Stop
 - Start: <state shows RUNNING>
-- Stop: <state shows STOPPED>
-
 ![OCI running](images/oci/oci_running.png)
+- Stop: <state shows STOPPED>
+![OCI stopped](images/oci/oci_stopped.png)
+
 
 ### Terminate
 - Terminate and delete boot volume; verify cleanup
