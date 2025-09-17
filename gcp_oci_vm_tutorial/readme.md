@@ -39,20 +39,20 @@
 
 ## Oracle Cloud (OCI)
 ### Create
-1. Compartment: <name>
+1. Compartment: <y0y0l0>
 2. Networking: VCN with Internet Connectivity (defaults)
-3. Shape: <smallest/free-eligible>
-4. Image: Ubuntu (or Oracle Linux)
-5. Public IP: ephemeral
+3. Shape: <smallest/free-eligible -Canonical Ubuntu 24.04 Minimal>
+4. Image: Ubuntu  <VM.Standard.E2.1.Micro (1 OCPU, 1 GB RAM)>
+5. Public IP: ephemeral <IP 150.136.85.185>
 6. Boot volume: default minimal
 
-![OCI create](images/oci_create.png)
+![OCI create](images/oci/oci_create.png)
 
 ### Start/Stop
 - Start: <state shows RUNNING>
 - Stop: <state shows STOPPED>
 
-![OCI running](images/oci_running.png)
+![OCI running](images/oci/oci_running.png)
 
 ### Terminate
 - Terminate and delete boot volume; verify cleanup
@@ -63,10 +63,14 @@
 
 ## Reflections
 ### Similarities
-- <brief bullets>
+- <OCI and GCP both have web consoles and similar VM lifecycle steps (create, start/stop, delete/terminate)>
+- <both offer free-tier eligible VM shapes with comparable specs (1 vCPU, 1 GB RAM)>
+- <both provide ephemeral public IPs and default networking setups>
 
 ### Differences
-- <brief bullets>
+- <OCI offers a more integrated suite of cloud services, while GCP has a broader global network and advanced SSH and AI tools>
+- <GCP's interface is more user-friendly; OCI provides deeper customization for enterprise needs such as load balancing and security>
+- <Pricing models and free tier limits vary, with OCI often providing more generous resources and lower costs for VMs>
 
 ### Preference (OCI vs GCP) and Why
-- <one short paragraph>
+- <I prefer OCI for its cost-effectiveness and deeper enterprise customization options, but GCP's user-friendly interface and advanced global network make it ideal for rapid development and AI workloads.>
