@@ -67,11 +67,10 @@
 - <OCI and GCP both have web consoles and similar VM lifecycle steps (create, start/stop, delete/terminate)>
 - <both offer free-tier eligible VM shapes with comparable specs (1 vCPU, 1 GB RAM)>
 - <both provide ephemeral public IPs and default networking setups>
-
 ### Differences
 - <OCI offers a more integrated suite of cloud services, while GCP has a broader global network and advanced SSH and AI tools>
 - <GCP's interface is more user-friendly; OCI provides deeper customization for enterprise needs such as load balancing and security>
 - <Pricing models and free tier limits vary, with OCI often providing more generous resources and lower costs for VMs>
-
 ### Preference (OCI vs GCP) and Why
-- <I prefer OCI for its cost-effectiveness and deeper enterprise customization options, but GCP's user-friendly interface and advanced global network make it ideal for rapid development and AI workloads. GCP has better response times with start/stop operations. and the SSH experience is seamless.>
+- <I prefer OCI for its cost-effectiveness and deeper enterprise customization options, but GCP's user-friendly interface and advanced global network make it ideal for rapid development and AI workloads.>
+- <GCP has better response times with start/stop operations, and the SSH experience is seamless.>
