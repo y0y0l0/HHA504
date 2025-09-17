@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+
+*.py[codz]
+*$py.class
+# Python
+*__pycache__/
+*.pyc
+
+# Environments
+*.env
+*.envrc
+*.venv
+*env/
+*venv/
+*ENV/
+*env.bak/
+*venv.bak/
+
+# IDE
+*.vscode/
+*.idea/
+
+# Keys
+*.key
+*.ppk
+*.cer
+*.pem
