@@ -57,7 +57,7 @@
 ### Terminate
 - Terminate and delete boot volume; verify cleanup
 
-![OCI cleaned](images/oci_clean.png)
+![OCI cleaned](images/oci/oci_clean.png)
 
 ---
 
