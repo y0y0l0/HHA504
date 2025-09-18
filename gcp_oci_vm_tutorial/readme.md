@@ -3,6 +3,8 @@
 ## Video
 - GCP/Zoom: <https://github.com/y0y0l0/HHA504/blob/main/gcp_oci_vm_tutorial/zoom/gcp_create_start_stop_delete_tutorial.mp4>
 - OCI/Zoom: <https://github.com/y0y0l0/HHA504/blob/main/gcp_oci_vm_tutorial/zoom/oci_create_start_stop_delete_tutorial.mp4>
+- GCP/YouTube: <https://youtu.be/M_IYTBdEv-Y>
+- OCI/YouTube: <https://youtu.be/PTZFQelotBY>
 
 
 ## Prereqs
