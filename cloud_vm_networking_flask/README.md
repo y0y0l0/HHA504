@@ -1,10 +1,32 @@
 Flask on Cloud VM (Assignment 2)
 Student Info
-Name: Yatza Lo
-Cloud Provider:
+Name: Yatza
+
+Cloud Provider: Google Cloud Platform (GCP)
 Video recording:
-Zoom/Loom:
-Steps
+Zoom:
+## Learning goals
+- Create a VM on a cloud provider (GCP_Compute Engine)
+- Configure the VM 
+    - OS: Ubuntu
+    - micro instance
+    - Ingress
+    - Action on match: yes
+    - Source IP ranges: 0.0.0.0/0
+- Configure the VM to allow HTTP (80) and HTTPS (443) traffic
+- Configure Firewall policies to open custom port 5003
+- SSH into the VM
+- Update the OS
+- Install Python, Git, Flask, VENV, and Nano
+- Clone a gitHub repo
+- Create and activate a virtual environment
+- Install Flask, Python, Git, VENV, and Nano using pip and requirements.txt
+- Run a simple Flask app on port 5003 via localhost
+- Modify the Flask app using gitHub to return "Hello from New York!"
+- Access the Flask app via GCP VM public IP
+- (Bonus) Access the app via a custom domain name
+
+### Steps
 1. VM Creation
 [screenshot]
 
