@@ -1,6 +1,6 @@
 Flask on Cloud VM (Assignment 2)
 Student Info
-Name: Yatza
+Name: y0y0l0
 
 Cloud Provider: Google Cloud Platform (GCP)
 Video recording:
@@ -9,12 +9,12 @@ Zoom:
 - Create a VM on a cloud provider (GCP_Compute Engine)
 - Configure the VM 
     - OS: Ubuntu
-    - micro instance
+    - e2-micro instance
+- Configure the VM to allow HTTP (80) and HTTPS (443) traffic
+- Configure Firewall policies to open custom port 5003
     - Ingress
     - Action on match: yes
     - Source IP ranges: 0.0.0.0/0
-- Configure the VM to allow HTTP (80) and HTTPS (443) traffic
-- Configure Firewall policies to open custom port 5003
 - SSH into the VM
 - Update the OS
 - Install Python, Git, Flask, VENV, and Nano
