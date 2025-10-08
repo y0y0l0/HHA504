@@ -29,7 +29,7 @@
 
 ## Steps
 ## 1. VM Creation
-- 1. Hamburger navigation menu → Compute Engine → VM instances → Create Instance
+- 1 Hamburger navigation menu → Compute Engine → VM instances → Create Instance
 - 2. Region/zone: <lowest any cost zone -us-central1 (Iowa)>
 - 3. Machine type: <low cost, day-to-day computing - e2-micro 0.25-2 vCPU (1 shared core), 1 GB RAM>
 - 4. vCPUs to core ratio: <two vCPUs per core>
@@ -91,13 +91,14 @@ URL: http://localhost:5003
 ```bash
  http://localhost:5003
 ```
-![Flask App Running on Public IP Access](images/publicIP.png)
+![Flask App Running on localhost IP Access](images/localhostIP.png)
+
 ### Validate the Flask app is running on port 5003 via public IP by accessing the following URLs in a web browser:
 URL: http://35.202.165.68:5003
 ```bash
  http://35.202.165.68:5003
 ```
-![Flask App Running on localhost IP Access](images/localhostIP.png)
+![Flask App Running on Public IP Access](images/publicIP.png)
 
 ## 5. Public IP Access
 URL: http://35.202.165.68:5003
