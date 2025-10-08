@@ -1,4 +1,4 @@
-##### Flask on Cloud VM (Assignment 2)
+## Flask on Cloud VM (Assignment 2)
 ##### Student Name: Yatza Lo
 ##### Cloud Provider: Google Cloud Platform (GCP)
 ## Videos Recording:
