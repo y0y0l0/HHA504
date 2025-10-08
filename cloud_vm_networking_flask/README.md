@@ -30,7 +30,7 @@
 ## Steps
 ## 1. VM Creation
 - 1. Hamburger navigation menu → Compute Engine → VM instances → Create Instance
-- 2. Region/zone: <lowest cost zone -us-central1 (Iowa)>
+- 2. Region/zone: <lowest any cost zone>
 - 3. Machine type: <smallest available/free-eligible - e2-micro 0.25-2 vCPU (1 shared core), 1 GB RAM>
 - 4. vCPUs to core ratio: <two vCPUs per core>
 - 5. Operating System and Storage: <Ubuntu 24.04 LTS Minimal; default 10 GB standard persistent disk>
