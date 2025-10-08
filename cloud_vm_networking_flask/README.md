@@ -4,7 +4,7 @@ Name: y0y0l0
 
 Cloud Provider: Google Cloud Platform (GCP)
 Video recording:
-Zoom:
+
 ## Learning goals
 - Create a VM on a cloud provider (GCP_Compute Engine)
 - Configure the VM 
@@ -27,6 +27,9 @@ Zoom:
 - Access the Flask app via GCP VM public IP
 - (Bonus) Access the app via a custom domain name
 
+## Video
+- GCP part 1 - intro and launching flask on local environment/YouTube: <https://www.youtube.com/watch?v=sZkhsoZYsRQ>
+- GCP part 2 - deploying flask app on cloud VM/YouTube: <https://www.youtube.com/watch?v=uXEJiomjac0>
 ### Steps
 1. VM Creation
 ![Screenshot of VM Creation](images/vmCreation.png)
