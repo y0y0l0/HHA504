@@ -54,6 +54,7 @@ python3 --version
 pip3 --version
 git --version
 ```
+![Validate Software Installations](images/confirmAppInstall.png)
 ## 4. Flask App Running
 ### Clone the gitHub repo
 ```bash
@@ -61,7 +62,7 @@ git clone https://github.com/y0y0l0/HHA504.git
 ```
 ### Create and activate a virtual environment
 ```bash
-cd HHA504
+cd HHA504/cloud_vm_networking_flask
 python3 -m venv .venv
 source .venv/bin/activate
 ```
@@ -79,11 +80,13 @@ cd scripts
 python3 scripts/app.py
 ```
 ### Validate the Flask app is running on port 5003 via localhost by accessing the following URLs in a web browser:
+URL: http://localhost:5003
 ```bash
  http://localhost:5003
 ```
 ![Flask App Running on Public IP Access](images/publicIP.png)
 ### Validate the Flask app is running on port 5003 via public IP by accessing the following URLs in a web browser:
+URL: http://35.202.165.68:5003
 ```bash
  http://35.202.165.68:5003
 ```
