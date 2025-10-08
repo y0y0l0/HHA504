@@ -15,12 +15,13 @@ Zoom:
     - Ingress
     - Action on match: yes
     - Source IP ranges: 0.0.0.0/0
-- SSH into the VM
-- Update the OS
-- Install Python, Git, Flask, VENV, and Nano
-- Clone a gitHub repo
-- Create and activate a virtual environment
-- Install Flask, Python, Git, VENV, and Nano using pip and requirements.txt
+- Setup VM
+    - SSH into the VM
+    - Update the OS
+    - Install Python, Git, Flask, VENV, and Nano
+    - Clone a gitHub repo
+    - Create and activate a virtual environment
+    - Install Flask, Python, Git, VENV, and Nano using pip and requirements.txt
 - Run a simple Flask app on port 5003 via localhost
 - Modify the Flask app using gitHub to return "Hello from New York!"
 - Access the Flask app via GCP VM public IP
@@ -28,20 +29,26 @@ Zoom:
 
 ### Steps
 1. VM Creation
-[screenshot]
+![Screenshot of VM Creation](images/vmCreation.png)
 
-2. Networking (Port 5003 Open)
-[screenshot]
-
+2. Networking (images\networkPort5003OpenRule.png)
+![Networking (Port 5003 Open)](images/networkPort5003OpenRule.png)
+![Firewall Policy (Port 5003 Open)](images/firewallPort5003OpenRule.png)
 3. OS Update + Python Install
-[commands + screenshot]
+```bash
+sudo apt-get update  # Update the package lists for upgrades and new packages
+![OS Update](images/osUpdate.png)
+sudo apt-get install python3 python3-pip python3-venv git nano -y  # Install Python3, pip, venv, git, and nano
+![Git Python Pip Venv Nano Install](images/appInstall.png)
+```
 
 4. Flask App Running
-[screenshot of terminal + browser]
-
+![Flask App Running](images/flaskAppRunning.png)
 5. Public IP Access
-URL: http://XX.XX.XXX.XXX:5003
-[screenshot]
+URL: http://35.202.165.68:5003
+
+![Public IP Access](images/publicIP.png)
+![localhost IP Access](images/localhostIP.png)
 
 6. (Bonus) Domain Name
 Domain: http://mydomain.tech:5003
