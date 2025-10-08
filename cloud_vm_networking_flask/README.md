@@ -1,10 +1,11 @@
-Flask on Cloud VM (Assignment 2)
-Student Info
-Name: Yatza Lo
+# Flask on Cloud VM (Assignment 2)
+# Student Info
+# Name: Yatza Lo
 
-Cloud Provider: Google Cloud Platform (GCP)
-Video recording:
-
+# Cloud Provider: Google Cloud Platform (GCP)
+## Videos Recording:
+- GCP part 1 - Intro and launching flask on local environment/YouTube: <https://www.youtube.com/watch?v=sZkhsoZYsRQ>
+- GCP part 2 - Deploying flask app on GCP cloud VM/YouTube: <https://www.youtube.com/watch?v=uXEJiomjac0>
 ## Learning goals
 - Create a VM on a cloud provider (GCP_Compute Engine)
 - Configure the VM 
@@ -27,9 +28,7 @@ Video recording:
 - Access the Flask app via GCP VM public IP
 - (Bonus) Access the app via a custom domain name
 
-## Videos
-- GCP part 1 - Intro and launching flask on local environment/YouTube: <https://www.youtube.com/watch?v=sZkhsoZYsRQ>
-- GCP part 2 - Deploying flask app on GCP cloud VM/YouTube: <https://www.youtube.com/watch?v=uXEJiomjac0>
+
 ### Steps
 1. VM Creation
 ![Screenshot of VM Creation](images/vmCreation.png)
