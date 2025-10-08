@@ -1,8 +1,8 @@
-# Flask on Cloud VM (Assignment 2)
-# Student Info
-# Name: Yatza Lo
+##### Flask on Cloud VM (Assignment 2)
+##### Student Info
+##### Name: Yatza Lo
 
-# Cloud Provider: Google Cloud Platform (GCP)
+##### Cloud Provider: Google Cloud Platform (GCP)
 ## Videos Recording:
 - GCP part 1 - Intro and launching flask on local environment/YouTube: <https://www.youtube.com/watch?v=sZkhsoZYsRQ>
 - GCP part 2 - Deploying flask app on GCP cloud VM/YouTube: <https://www.youtube.com/watch?v=uXEJiomjac0>
