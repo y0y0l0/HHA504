@@ -105,5 +105,5 @@ URL: http://35.202.165.68:5003
 
 
 ## 6. (Bonus) Domain Name
-Domain: http://mydomain.tech:5003
+Domain: http://mydomain.tech:5003 - pending GitHub approval
 [screenshot]
