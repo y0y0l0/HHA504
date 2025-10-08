@@ -35,23 +35,35 @@ Video recording:
 ![Screenshot of VM Creation](images/vmCreation.png)
 
 2. Networking (images\networkPort5003OpenRule.png)
+Set up firewall rule to allow traffic on port 5003
 ![Networking (Port 5003 Open)](images/networkPort5003OpenRule.png)
+Check firewall policy to confirm port 5003 is open
 ![Firewall Policy (Port 5003 Open)](images/firewallPort5003OpenRule.png)
 3. OS Update + Python Install
+## Update the package lists for upgrades and new packages
 ```bash
-sudo apt-get update  # Update the package lists for upgrades and new packages
-![OS Update](images/osUpdate.png)
-sudo apt-get install python3 python3-pip python3-venv git nano -y  # Install Python3, pip, venv, git, and nano
-![Git Python Pip Venv Nano Install](images/appInstall.png)
+sudo apt-get update
 ```
-
+![OS Update](images/osUpdate.png)
+## Install Python3, pip, venv, git, and nano
+``bash
+sudo apt-get install python3 python3-pip python3-venv git nano -y  # Install Python3, pip, venv, git, and nano
+```
+![Git Python Pip Venv Nano Install](images/appInstall.png)
+## Verify installations
+```bash
+python3 --version
+pip3 --version
+git --version
+```
 4. Flask App Running
-![Flask App Running](images/flaskAppRunning.png)
+![Flask App Running on Public IP Access](images/publicIP.png)
+![Flask App Running on localhost IP Access](images/localhostIP.png)
+
 5. Public IP Access
 URL: http://35.202.165.68:5003
 
-![Public IP Access](images/publicIP.png)
-![localhost IP Access](images/localhostIP.png)
+
 
 6. (Bonus) Domain Name
 Domain: http://mydomain.tech:5003
