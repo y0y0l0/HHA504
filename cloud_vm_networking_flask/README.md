@@ -78,7 +78,15 @@ cd HHA504/cloud_vm_networking_flask
 cd scripts
 python3 scripts/app.py
 ```
+### Validate the Flask app is running on port 5003 via localhost by accessing the following URLs in a web browser:
+```bash
+ http://localhost:5003
+```
 ![Flask App Running on Public IP Access](images/publicIP.png)
+### Validate the Flask app is running on port 5003 via public IP by accessing the following URLs in a web browser:
+```bash
+ http://35.202.165.68:5003
+```
 ![Flask App Running on localhost IP Access](images/localhostIP.png)
 
 ## 5. Public IP Access
