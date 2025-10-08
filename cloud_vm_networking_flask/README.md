@@ -45,7 +45,7 @@ sudo apt-get update
 ![OS Update](images/osUpdate.png)
 ### Install Python3, pip, venv, git, and nano
 ```bash
-sudo apt-get install python3 python3-pip python3-venv git nano -y 
+sudo apt install git python3 python3-pip python3.13-venv nano -y
 ```
 ![Git Python Pip Venv Nano Install](images/appInstall.png)
 ### Verify installations
