@@ -27,53 +27,53 @@
 - (Bonus) Access the app via a custom domain name
 
 
-### Steps
-1. VM Creation
+## Steps
+## 1. VM Creation
 ![Screenshot of VM Creation](images/vmCreation.png)
 
-2. Networking (images\networkPort5003OpenRule.png)
-## Set up firewall rule to allow traffic on port 5003
+## 2. Networking (images\networkPort5003OpenRule.png)
+### Set up firewall rule to allow traffic on port 5003
 ![Networking (Port 5003 Open)](images/networkPort5003OpenRule.png)
 
-## Check firewall policy to confirm port 5003 is open
+### Check firewall policy to confirm port 5003 is open
 ![Firewall Policy (Port 5003 Open)](images/firewallPort5003OpenRule.png)
-3. OS Update + Python Install
-## Update the package lists for upgrades and new packages
+## 3. OS Update + Python Install
+### Update the package lists for upgrades and new packages
 ```bash
 sudo apt-get update
 ```
 ![OS Update](images/osUpdate.png)
-## Install Python3, pip, venv, git, and nano
+### Install Python3, pip, venv, git, and nano
 ```bash
 sudo apt-get install python3 python3-pip python3-venv git nano -y 
 ```
 ![Git Python Pip Venv Nano Install](images/appInstall.png)
-## Verify installations
+### Verify installations
 ```bash
 python3 --version
 pip3 --version
 git --version
 ```
-4. Flask App Running
-## Clone the gitHub repo
+## 4. Flask App Running
+### Clone the gitHub repo
 ```bash
 git clone https://github.com/y0y0l0/HHA504.git
 ```
-## Create and activate a virtual environment
+### Create and activate a virtual environment
 ```bash
 cd HHA504
 python3 -m venv .venv
 source .venv/bin/activate
 ```
-## Install dependencies from requirements.txt
+### Install dependencies from requirements.txt
 ```bash
 pip install -r requirements.txt
 ```
-## Navigate to the cloud_vm_networking_flask directory
+### Navigate to the cloud_vm_networking_flask directory
 ```bash
 cd HHA504/cloud_vm_networking_flask
 ```
-## Run the Flask app on port 5003
+### Run the Flask app on port 5003
 ```bash
 cd scripts
 python3 scripts/app.py
@@ -81,11 +81,10 @@ python3 scripts/app.py
 ![Flask App Running on Public IP Access](images/publicIP.png)
 ![Flask App Running on localhost IP Access](images/localhostIP.png)
 
-5. Public IP Access
+## 5. Public IP Access
 URL: http://35.202.165.68:5003
 
 
-
-6. (Bonus) Domain Name
+## 6. (Bonus) Domain Name
 Domain: http://mydomain.tech:5003
 [screenshot]
