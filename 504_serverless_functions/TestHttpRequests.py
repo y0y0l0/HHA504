@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 #load_dotenv()
 load_dotenv()
 
-print(os.getenv("aws_key"))
 
 # GCP Testing
 gcp_url = "https://python504-307314263527.europe-west1.run.app"
