@@ -21,7 +21,7 @@ ________________________________________________________________________________
 | **Functionality**       | Supports multiple languages                      | Strong enterprise capabilities                               |
 | **Pricing**             | Pay-as-you-go, free tier available               | Pay-as-you-go, free tier available                           |
 | **Deployment**          | Simple deployment via CLI or console             | Integrated with Visual Studio, Azure DevOps                  |
-| **Monitoring**          | Stackdriver for logging and monitoring           | Azure Monitor and Application Insights                       |
+| **Logs and Monitoring** | Logging and monitoring using Observability tools | Azure Monitor using invocation logs and metrics tools        |
 | **Cold Start**          | Generally fast, but can vary based on region     | Slower response times                                        |
 | **Security**            | Strong security features                         | Strong security features                                     |
 | **Regions**             | Wide range of global regions                     | Limited global regions for student accounts                  |
@@ -202,8 +202,12 @@ Azure GET Test:
 ```
 ### Azure Response Example:
 ![Azure Response](images/azure_response.png)
-
-# Recording Requirements Recording Requirements 
+## Serverless Function Logs and Monitoring:
+- **GCP**: Use Observability tools in the GCP Console to view logs, errors and metrics tomonitor function performance.
+  ![GCP Logs](images/gcp_logs.png)
+- **Azure**: Use Azure Monitor in the Azure Portal to view invocation logs and metrics to monitor function performance.
+  ![Azure Logs](images/azure_logs.png)
+# Deliverable Requirements 
 Brief intro (name, which two clouds you chose).
 Show your repository and where the cloud‑specific code lives.
 Show the live endpoint(s) and execute a POST request with two examples (one normal, one abnormal).
