@@ -26,7 +26,6 @@ ________________________________________________________________________________
 | **Security**         | Strong security features                         | Strong security features                                     |
 | **Regions**          | Wide range of global regions                     | Limited global regions for student accounts                  |
 | **Overall**          | Great for startups and small to medium businesses| Excellent for enterprises and Microsoft-centric environments |
-|______________________|__________________________________________________|______________________________________________________________|
 ## Steps to Create a Serverless Function:
 1. **Set Up Your Environment**: 
     * GCP - Cloud Run or Cloud Functions
