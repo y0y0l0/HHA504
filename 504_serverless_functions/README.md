@@ -14,18 +14,19 @@ This project utilizes serverless functions to handle backend logic and API reque
 - **Reduced Operational Overhead**: No need to manage infrastructure.
 - **Faster Development**: Focus on writing code rather than managing servers.
 ## GCP vs Azure:
-__________________________________________________________________________________________________________________________________________
-| Feature              | GCP (Google Cloud Platform)                      | Azure (Microsoft Azure)                                      |
-|----------------------|------------------------------------------------- |--------------------------------------------------------------|
-| **Ease of Use**      | User-friendly interface, good documentation      | Integrated with Microsoft tools, slightly more complex to use|
-| **Functionality**    | Supports multiple languages                      | Strong enterprise capabilities                               |
-| **Pricing**          | Pay-as-you-go, free tier available               | Pay-as-you-go, free tier available                           |
-| **Deployment**       | Simple deployment via CLI or console             | Integrated with Visual Studio, Azure DevOps                  |
-| **Monitoring**       | Stackdriver for logging and monitoring           | Azure Monitor and Application Insights                       |
-| **Cold Start**       | Generally fast, but can vary based on region     | Slower response times                                        |
-| **Security**         | Strong security features                         | Strong security features                                     |
-| **Regions**          | Wide range of global regions                     | Limited global regions for student accounts                  |
-| **Overall**          | Great for startups and small to medium businesses| Excellent for enterprises and Microsoft-centric environments |
+_____________________________________________________________________________________________________________________________________________
+| Feature                 | GCP (Google Cloud Platform)                      | Azure (Microsoft Azure)                                      |
+|-------------------------|------------------------------------------------- |--------------------------------------------------------------|
+| **Ease of Use**         | User-friendly interface, good documentation      | Integrated with Microsoft tools, slightly more complex to use|
+| **Functionality**       | Supports multiple languages                      | Strong enterprise capabilities                               |
+| **Pricing**             | Pay-as-you-go, free tier available               | Pay-as-you-go, free tier available                           |
+| **Deployment**          | Simple deployment via CLI or console             | Integrated with Visual Studio, Azure DevOps                  |
+| **Monitoring**          | Stackdriver for logging and monitoring           | Azure Monitor and Application Insights                       |
+| **Cold Start**          | Generally fast, but can vary based on region     | Slower response times                                        |
+| **Security**            | Strong security features                         | Strong security features                                     |
+| **Regions**             | Wide range of global regions                     | Limited global regions for student accounts                  |
+| **Overall**             | Great for startups and small to medium businesses| Excellent for enterprises and Microsoft-centric environments |
+| **Personal Preference** | Preferred for ease of use and quick deployment   | Preferred for enterprise integration and Microsoft ecosystem |
 ## Steps to Create a Serverless Function:
 1. **Set Up Your Environment**: 
     * GCP - Cloud Run or Cloud Functions
@@ -33,9 +34,9 @@ ________________________________________________________________________________
     Ensure you have a serverless framework or platform set up (GCP and Azure).
 2. **Modify http Function**: 
     * GCP - Use the platform's Cloud Run function to edit source code and create a new serverless http_function.
-    ![.\images\gcp_http_function.png]
+    ![ GCP Cloud Run](images\gcp_http_function.png)
     * Azure - Use the platform's function app code+test feature to create a new serverless http_trigger function.
-    ![.\images\azure_http_function.png]
+    ![ Azure Function App](images\azure_http_function.png)
 3. **Write Your Code**: 
     * GCP - Implement the logic for your function using json and functions_framework.
     * Azure - Implement the logic for your function using logging and azure.functions. 
@@ -140,7 +141,7 @@ GET
 }
 ```
 ## Google Cloud Platform (GCP) Response:
-![.\images\gcp_response.png]
+![GCP Response](images\gcp_response.png)
 ## Azure Request Example Code Snippet:
 ```
 import requests
@@ -200,7 +201,7 @@ Azure GET Test:
  400 Bad Request 'Name', 'Spo2', and 'Pulse' are required fields in the request body for a personalized response.
 ```
 ### Azure Response Example:
-![.\images\azure_response.png]
+![Azure Response](images\azure_response.png)
 
 # Recording Requirements Recording Requirements 
 Brief intro (name, which two clouds you chose).
