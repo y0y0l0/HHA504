@@ -14,19 +14,20 @@ This project utilizes serverless functions to handle backend logic and API reque
 - **Reduced Operational Overhead**: No need to manage infrastructure.
 - **Faster Development**: Focus on writing code rather than managing servers.
 ## GCP vs Azure:
-_____________________________________________________________________________________________________________________________________________
-| Feature                 | GCP (Google Cloud Platform)                      | Azure (Microsoft Azure)                                      |
-|-------------------------|------------------------------------------------- |--------------------------------------------------------------|
-| **Ease of Use**         | User-friendly interface, good documentation      | Integrated with Microsoft tools, slightly more complex to use|
-| **Functionality**       | Supports multiple languages                      | Strong enterprise capabilities                               |
-| **Pricing**             | Pay-as-you-go, free tier available               | Pay-as-you-go, free tier available                           |
-| **Deployment**          | Simple deployment via CLI or console             | Integrated with Visual Studio, Azure DevOps                  |
-| **Logs and Monitoring** | Logging and monitoring using Observability tools | Azure Monitor using invocation logs and metrics tools        |
-| **Cold Start**          | Generally fast, but can vary based on region     | Slower response times                                        |
-| **Security**            | Strong security features                         | Strong security features                                     |
-| **Regions**             | Wide range of global regions                     | Limited global regions for student accounts                  |
-| **Overall**             | Great for startups and small to medium businesses| Excellent for enterprises and Microsoft-centric environments |
-| **Personal Preference** | Preferred for ease of use and quick deployment   | Preferred for enterprise integration and Microsoft ecosystem |
+___________________________________________________________________________________________________________________________________________________________
+| Feature                 | GCP (Google Cloud Platform)                          | Azure (Microsoft Azure)                                                 |
+|-------------------------|------------------------------------------------------|-------------------------------------------------------------------------|
+| **Ease of Use**         | User-friendly interface, good documentation          | Integrated with Microsoft tools, slightly more complex to use           |
+| **Functionality**       | Supports multiple languages                          | Strong enterprise capabilities                                          |
+| **Pricing**             | Pay-as-you-go, free tier available                   | Pay-as-you-go, free tier available                                      |
+| **Deployment**          | Simple deployment via CLI or console                 | Integrated with Visual Studio, Azure DevOps                             |
+| **Logs and Monitoring** | Logging and monitoring using Observability tools     | Azure Monitor using invocation logs and metrics tools                   |
+| **Cold Start**          | Generally fast, but can vary based on region         | Slower response times                                                   |
+| **Security**            | Strong security features                             | Strong security features                                                |
+| **Regions**             | Wide range of global regions                         | Limited global regions for student accounts                             |
+| **Overall**             | Great for startups and small to medium businesses    | Excellent for enterprises and Microsoft-centric environments            |
+| **Gotchas**             | Source code will not compile if linting errors exist | Requires resource and services setup in the designated allowable region |
+| **Personal Preference** | Preferred for ease of use and quick deployment       | Preferred for enterprise integration and Microsoft ecosystem            |
 ## Steps to Create a Serverless Function:
 1. **Set Up Your Environment**: 
     * GCP - Cloud Run or Cloud Functions
