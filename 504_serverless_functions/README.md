@@ -34,9 +34,9 @@ ________________________________________________________________________________
     Ensure you have a serverless framework or platform set up (GCP and Azure).
 2. **Modify http Function**: 
     * GCP - Use the platform's Cloud Run function to edit source code and create a new serverless http_function.
-    ![ GCP Cloud Run](images\gcp_http_function.png)
+    ![ GCP Cloud Run](images/gcp_http_function.png)
     * Azure - Use the platform's function app code+test feature to create a new serverless http_trigger function.
-    ![ Azure Function App](images\azure_http_function.png)
+    ![ Azure Function App](images/azure_http_function.png)
 3. **Write Your Code**: 
     * GCP - Implement the logic for your function using json and functions_framework.
     * Azure - Implement the logic for your function using logging and azure.functions. 
@@ -141,7 +141,7 @@ GET
 }
 ```
 ## Google Cloud Platform (GCP) Response:
-![GCP Response](images\gcp_response.png)
+![GCP Response](images/gcp_response.png)
 ## Azure Request Example Code Snippet:
 ```
 import requests
@@ -201,7 +201,7 @@ Azure GET Test:
  400 Bad Request 'Name', 'Spo2', and 'Pulse' are required fields in the request body for a personalized response.
 ```
 ### Azure Response Example:
-![Azure Response](images\azure_response.png)
+![Azure Response](images/azure_response.png)
 
 # Recording Requirements Recording Requirements 
 Brief intro (name, which two clouds you chose).
