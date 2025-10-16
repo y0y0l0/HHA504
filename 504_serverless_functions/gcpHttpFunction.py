@@ -17,7 +17,14 @@ def hello_http(request):
     # Presence check
     if spo2 is None or pulse is None:
         return (
-            json.dumps({"error": "Both 'SpO2' and 'Pulse' are required."}),
+            json.dumps({"error": " 'SpO2' is a required field."}),
+            400,
+            {"Content-Type": "application/json"},
+        )
+     # Presence check
+    if pulse is None:
+        return (
+            json.dumps({"error": " 'Pulse' is a required field."}),
             400,
             {"Content-Type": "application/json"},
         )

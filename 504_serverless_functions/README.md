@@ -5,7 +5,7 @@ This project utilizes serverless functions to handle backend logic and API reque
 - Create a serverless function that handles HTTP requests and responses.
 ## Steps to Create a Serverless Function:
 1. **Set Up Your Environment**: Ensure you have a serverless framework or platform set up (GCP and Azure).
-2. **Create a New Function**: Use the platform's CLI or dashboard to create a new serverless function.
+2. **Create a New Function**: Use the platform's dashboard to create a new serverless function.
 3. **Write Your Code**: Implement the logic for your function. This will evaluate HTTP requests and return appropriate responses.
 4. **Deploy the Function**: Use the platform's deployment tools to deploy your function to the cloud.
 5. **Test the Function**: Use tools like Postman or curl to send HTTP requests to your function and verify the responses.
