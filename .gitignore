@@ -7,7 +7,7 @@
 *.pyc
 
 # Environments
-*.env
+
 *.envrc
 *.venv
 *env/
