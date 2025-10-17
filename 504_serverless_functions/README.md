@@ -1,6 +1,8 @@
 # Cloud Serverless Functions Overview
 This project utilizes serverless functions to handle backend logic and API requests. Serverless functions allow you to run code without managing servers, providing scalability and ease of deployment.
 ## Video Recordings:
+- Cloud Function Demo Video Links (YouTube) Part 1: https://www.youtube.com/watch?v=ANy6nwHBaV4
+- Cloud Function Demo Video Links (YouTube) Part 2: https://www.youtube.com/watch?v=7_mWgpiQGJI
 ## Learning Goal:
 - Create a serverless function that handles HTTP requests and responses.
 - Deploy the function to a cloud platform (GCP and Azure).
