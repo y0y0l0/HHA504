@@ -15,7 +15,7 @@ def hello_http(request):
     pulse = data.get("Pulse", args.get("Pulse"))
 
     # Presence check
-    if spo2 is None or pulse is None:
+    if spo2 is None:
         return (
             json.dumps({"error": " 'SpO2' is a required field."}),
             400,
