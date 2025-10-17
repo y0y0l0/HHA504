@@ -84,7 +84,7 @@ cd HHA504/cloud_vm_networking_flask
 ### Run the Flask app on port 5003
 ```bash
 cd scripts
-python3 scripts/app.py
+python3 app.py
 ```
 ### Validate the Flask app is running on port 5003 via localhost by accessing the following URLs in a web browser:
 URL: http://localhost:5003
@@ -105,5 +105,5 @@ URL: http://35.202.165.68:5003
 
 
 ## 6. (Bonus) Domain Name
-Domain: http://mydomain.tech:5003 - pending GitHub approval
+Domain: http://y0y0l0.tech:5003 - pending GitHub approval
 ![GitHub Education Approval Status](images/DomainStatus.png)
