@@ -1,5 +1,8 @@
 # Cloud Serverless Functions Overview
 This project utilizes serverless functions to handle backend logic and API requests. Serverless functions allow you to run code without managing servers, providing scalability and ease of deployment.
+## Cloud Endpoints:
+- GCP Cloud Functions Endpoint: https://python504-307314263527.europe-west1.run.app
+- Azure Functions Endpoint: ["https://python-serverless-gcffbjdngbgcbmg4.westus3-01.azurewebsites.net/api/http_trigger1?"+os.getenv("azure_master_key")]
 ## Video Recordings:
 - Cloud Function Demo Video Links (YouTube) Part 1: https://www.youtube.com/watch?v=ANy6nwHBaV4
 - Cloud Function Demo Video Links (YouTube) Part 2: https://www.youtube.com/watch?v=7_mWgpiQGJI
