@@ -3,8 +3,11 @@ import time
 from datetime import datetime, timezone
 from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
-load_dotenv('.env.example')  # This will automatically load from .env file
 import os
+
+
+load_dotenv('.env.example')  # This will automatically load from .env file
+
 
 sql_username = os.getenv("VM_USERNAME")
 sql_password = os.getenv("VM_PASSWORD")
