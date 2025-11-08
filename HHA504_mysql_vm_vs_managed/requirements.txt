@@ -2,4 +2,3 @@ sqlalchemy
 pymysql
 pandas
 python-dotenv
-cryptography
