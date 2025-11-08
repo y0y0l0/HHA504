@@ -23,7 +23,8 @@ Upon connecting to the VM, I ensured that all necessary packages were installed 
     GRANT ALL PRIVILEGES ON testDb.* TO 'dba'@'%';
     FLUSH PRIVILEGES;
     ```
-
+    ![GCP VM Instance](docs/screenshots/vm/gcp_vm_instance.png)
+    ![GCP VM Observability](docs/screenshots/vm/gcp_vm_instance_observability.png)
 2. **Install server packages; enable and start service.**
    * Set strong root password (or auth plugin).
    * Edit `/etc/mysql/mysql.conf.d/mysqld.cnf` (bind-address), restart service.
