@@ -1,9 +1,34 @@
 Upon connecting to the VM, I ensured that all necessary packages were installed and configured properly. This included setting up the MySQL server, creating the required databases and tables, and verifying that the environment variables were correctly loaded from the .env file.
-* Install server packages; enable and start service.
+1. **Set Up GCP VM**
+    * Create a new VM instance in GCP.
+        - use a small machine type (e.g., e2-small) to minimize costs.
+        - select Ubuntu-minimal as the operating system.
+        - enable firewall rules to allow traffic for SSH (default port 22) and MySQL port (default 3306).
+        - Connect to the VM using SSH.
+    * Install MySQL server and client.
+    ```bash
+    sudo apt update
+    sudo apt install nano mysql-server mysql-client -y
+    ```
+     - configured bind-address in MySQL configuration to allow remote connections.
+     ```bash
+     sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+     ```
+    - Changed `bind-address` from `127.0.0.1` to `0.0.0.0` to allow remote connections.
+    - Changed 'mysqlbind-address' from `127.0.0.1` to `0.0.0.0` to allow remote connections.
+    - Created a new MySQL admin user and database for the project.
+    ```sql
+    CREATE DATABASE testDb;
+    CREATE USER 'dba'@'%' IDENTIFIED BY 'change_me';
+    GRANT ALL PRIVILEGES ON testDb.* TO 'dba'@'%';
+    FLUSH PRIVILEGES;
+    ```
+
+2. **Install server packages; enable and start service.**
    * Set strong root password (or auth plugin).
    * Edit `/etc/mysql/mysql.conf.d/mysqld.cnf` (bind-address), restart service.
    * Configure firewall/security group rules minimally; note your choices in `setup_notes_vm.md`.
-3. **Test Locally VS Code and Inside of Cloud Console (GCP) environment **
+3. **Test Locally VS Code and external Cloud Console (GCP) environment**
     * `mysql -u <user> -p -h <VM_HOSTNAME> -P <VM_PORT> <VM_DATABASE>` from VM opening port 3306
     ![CLI test user connection to VM MySQL database](docs/screenshots/vm/CLI_test_user_credentials.png)
     * Validate connectivity from VS Code terminal using the same command.
