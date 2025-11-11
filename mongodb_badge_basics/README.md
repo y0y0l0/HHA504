@@ -30,8 +30,8 @@ Another example is USCDI3 requirements to store and share social determinants of
 Credly Profile: https://www.credly.com/users/yatza-lo
 
 ![MongoDB Overview Badge](images/MongoDB_Overview_Badge.png)
-Credly Badge Link: https://www.credly.com/earner/earned/badge/03d4edda-e469-4ddc-9403-0aefdb80ee17
+-  Credly Badge Link: https://www.credly.com/earner/earned/badge/03d4edda-e469-4ddc-9403-0aefdb80ee17
 
 ### 2. MongoDB Relational to Document Model Badge
 ![MongoDB Relational to Document Model Badge](images/MongoDB_RelationalToDocumentModel_Badge.png)
-Credly Badge Link: https://www.credly.com/earner/earned/badge/92d1048c-4e75-4a47-8ad8-e48cd27c5e00
+-  Credly Badge Link: https://www.credly.com/earner/earned/badge/92d1048c-4e75-4a47-8ad8-e48cd27c5e00
