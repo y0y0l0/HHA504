@@ -6,9 +6,7 @@ from dotenv import load_dotenv
 import os
 
 
-load_dotenv('.env.example')  # This will automatically load from .env file
-
-
+load_dotenv()  # This will automatically load from .env file
 sql_username = os.getenv("VM_USERNAME")
 sql_password = os.getenv("VM_PASSWORD")
 sql_hostname = os.getenv("VM_HOSTNAME")
@@ -22,7 +20,7 @@ server_url = f"mysql+pymysql://{sql_username}:{sql_password}@{sql_hostname}:{sql
 print("[STEP 1] Connecting to MySQL server (no DB):", server_url.replace(sql_password, "*****"))
 t0 = time.time()
 
-engine_server = create_engine(server_url, pool_pre_ping=True, connect_args={"ssl": False})
+engine_server = create_engine(server_url, pool_pre_ping=True, connect_args={"ssl": {"ssl": True, "check_hostname": False, "ca": None}})
 with engine_server.connect() as conn:
     # Read and execute the init.sql to create database if not exists
     with open("sql/init.sql", "r") as f:

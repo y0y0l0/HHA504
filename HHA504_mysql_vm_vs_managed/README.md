@@ -11,11 +11,7 @@ The goal of the assignment is to provision two MySQL databases on the same cloud
 * **GCP:** Cloud SQL for MySQL
 
 **VM services by cloud**
-
-* **Azure:** Azure Virtual Machines
 * **GCP:** Compute Engine
-* **OCI:** Compute
-
 ---
 
 ### 2) Learning Objectives
@@ -35,7 +31,7 @@ The goal of the assignment is to provision two MySQL databases on the same cloud
 ---
 ### 3) Packages that you will use: 
 
-* Inside of your requirements will need: `sqlalchemy`, `pymysql` , `pandas`, `python-dotenv`, `cryptography`, `time`, and `datetime`.
+* Inside of your requirements will need: `sqlalchemy`, `pymysql` , `pandas`, `python-dotenv`, `os`, `timezone`, and `datetime`.
 ---
 
 ### 4) Repository & Deliverables
@@ -56,8 +52,8 @@ HHA504_mysql_vm_vs_managed/
 │   ├─ vm/                     # VM portal, firewall, daemon status, CLI, etc.
 │   └─ managed/                # Managed service creation, connection details
 └─ docs/
-    ├─ setup_notes_vm.md
-    ├─ setup_notes_managed.md
+    ├─ setup_notes_vm.md        # VM detailed ordered steps, troubles, timing, and lessons learned
+    ├─ setup_notes_managed.md   # Managed detailed ordered steps, troubles, timing, and lessons learned
     └─ comparison.md           # timing & difficulty comparison
 ```
 
@@ -87,14 +83,11 @@ HHA504_mysql_vm_vs_managed/
 * `docs/comparison.md`:
   * A short paragraph on which you would choose in production and why
 * `screenshots/` evidence:
-
   * VM: portal/console creation page, package install, service status, firewall rules/security group, MySQL prompt proving DB/table exist, and a local or bastion test
   * Managed: creation wizard summary, connection info, authorized networks/VPC, connectivity test, metrics/overview page
 * 2–4 minute **recording** (Zoom/Loom link in README) showing:
-
   * Your repo
   * Running each script end-to-end (VM then Managed) and printed results
-
 ---
 
 ### 5) Task A — MySQL on a VM (Self-managed)
@@ -112,18 +105,17 @@ HHA504_mysql_vm_vs_managed/
    * Configure firewall/security group rules minimally; note your choices in `setup_notes_vm.md`.
 
 3. **Test Locally or Inside of Cloud Console (VS Code in GCP) environment **
-
    * `mysql -u <user> -p -h 127.0.0.1 -P 3306` from VM
    * Optional: set up an SSH tunnel from your dev machine instead of opening 3306 publicly.
-
 ---
 
 ### 6) Task B — Managed MySQL
 
 Create the provider’s managed MySQL with a small tier. Capture:
 
-* Engine version, vCPU/RAM tier
-* Network model (public IP allowlist)
+* Engine version, Enterprise tier sandbox/basic
+* Region, zone, availability (single/multi)
+* Network model (public IP allowlist = 0.0.0.0/0)
 * Initial admin user, DB name
 * Any automatic backups/HA configuration chosen
 
@@ -132,59 +124,97 @@ Create the provider’s managed MySQL with a small tier. Capture:
 ### 7) Python: SQLAlchemy + pandas Template
 
 Create a `.env` (do **not** commit) from `.env.example`:
-
 ```
 # VM
-VM_DB_HOST=10.0.1.10        # or 127.0.0.1 via SSH tunnel
-VM_DB_PORT=3306
-VM_DB_USER=class_user
-VM_DB_PASS=change_me
-VM_DB_NAME=class_db_netid
+VM_USERNAME=dba
+VM_PASSWORD=dba2025
+VM_TABLE_NAME=visits
+VM_HOSTNAME=35.222.61.81
+VM_PORT=3306
+VM_DATABASE=dummydb
+VM_TEST_QUERY="SELECT COUNT(*) AS n_rows FROM visits;"
 
-# Managed
-MAN_DB_HOST=...
-MAN_DB_PORT=3306
-MAN_DB_USER=class_user
-MAN_DB_PASS=change_me
-MAN_DB_NAME=class_db_netid
+MAN_USERNAME=dba
+MAN_PASSWORD=Dbaadmin2025!
+MAN_TABLE_NAME=visits
+MAN_HOSTNAME=34.132.117.17
+MAN_PORT=3306
+MAN_DATABASE=dummydb
+MAN_TEST_QUERY="SELECT COUNT(*) AS n_rows FROM visits;"
 ```
 
-**Connection URL patterns** (choose *one* driver and be consistent):
-
+**Connection URL patterns** (choosen driver for this project is PyMySQL):
 * PyMySQL: `mysql+pymysql://USER:PASS@HOST:PORT/DBNAME`
 * mysqlclient: `mysql+mysqldb://USER:PASS@HOST:PORT/DBNAME`
-
 **Snippet (adapt for vm vs managed):**
-
 ```python
-# scripts/vm_demo.py (similar for managed_demo.py)
+#Managed example
+import pandas as pd
+import time
+from datetime import datetime, timezone
+from sqlalchemy import create_engine, text
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # This will automatically load from .env file
+sql_username = os.getenv("MAN_USERNAME")
+sql_password = os.getenv("MAN_PASSWORD")
+sql_hostname = os.getenv("MAN_HOSTNAME")
+sql_database = os.getenv("MAN_DATABASE")
+sql_port = os.getenv("MAN_PORT")
+sql_test_query = os.getenv("MAN_TEST_QUERY")
+
+server_url = f"mysql+pymysql://{sql_username}:{sql_password}@{sql_hostname}:{sql_port}"
+```
+```python
+# VM example
+import pandas as pd
+import time
+from datetime import datetime, timezone
+from sqlalchemy import create_engine, text
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # This will automatically load from .env file
+sql_username = os.getenv("VM_USERNAME")
+sql_password = os.getenv("VM_PASSWORD")
+sql_hostname = os.getenv("VM_HOSTNAME")
+sql_database = os.getenv("VM_DATABASE")
+sql_port = os.getenv("VM_PORT")
+sql_test_query = os.getenv("VM_TEST_QUERY")
+
+server_url = f"mysql+pymysql://{sql_username}:{sql_password}@{sql_hostname}:{sql_port}"
 ```
 
 **Notes**
 
-* You must use a public IP (for demo): remember to delete resources after submission. They are expensive. 
-
+* You must use a public IP (for demo):
+  * VM: open port 3306 in firewall/security group bind-address 0.0.0.0
+  * Managed: add your dev machine IP or 0.0.0.0/0 to allow all IPs
 ---
 
 ### 8) What to Capture (Screenshots)
 
 * **VM path:** VM creation summary, security group/firewall, MySQL install + `systemctl status mysql`, `mysql --version`, `mysql` prompt showing `SHOW DATABASES;` and your DB/table present.
-* **Managed path:** service creation summary, connection endpoints, network/authorized list, and a simple query window or metrics page.
-* **Python runs:** terminal output of each script printing row counts, plus your environment layout (no secrets).
-
+[VM setup document](../docs/setup_notes_vm.md)
 ---
-
-### 9) Comparison (`docs/comparison.md`)
+* **Managed path:** service creation summary, connection endpoints, network/authorized list, and a simple query window or metrics page.
+[Managed setup document](../docs/setup_notes_managed.md)
+* **Python runs:** terminal output of each script printing row counts, plus your environment layout (no secrets).
+- VM demo script run
+- Managed demo script run
+![Managed demo script run](../screenshots/managed/vscode_managed_demo_successful_connection.png)
+---
+---
+### 9) Comparison
 
 Write approximately 200-400 words concluding which you’d choose in production for: (a) a small student app; (b) a departmental analytics DB; (c) a HIPAA-aligned workload (assume a BAA is available in your cloud).
-
+[Comparison](../docs/comparison.md)
 ---
 
 ---
-
 ### 10) Safety & Clean-up
 
 * Delete public ingress rules you created.
 * Stop or delete the VM and managed instance after you finish to avoid costs.
-
 ---

@@ -6,9 +6,7 @@ from dotenv import load_dotenv
 import os
 
 
-load_dotenv('.env.example')  # This will automatically load from .env file
-
-
+load_dotenv()  # This will automatically load from .env file
 sql_username = os.getenv("MAN_USERNAME")
 sql_password = os.getenv("MAN_PASSWORD")
 sql_hostname = os.getenv("MAN_HOSTNAME")
