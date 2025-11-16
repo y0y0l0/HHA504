@@ -87,6 +87,7 @@ HHA504_mysql_vm_vs_managed/
   * Managed: creation wizard summary, connection info, authorized networks/VPC, connectivity test, metrics/overview page
 * 2–4 minute **recording** (Zoom/Loom link in README) showing:
   * Running each script end-to-end (VM then Managed) and printed results
+  * Github repo link : https://github.com/y0y0l0/HHA504/tree/main/HHA504_mysql_vm_vs_managed
   * gcp managed demo video link: https://youtu.be/jpHw5lkVvnI
   * gcp vm demo video link:
    * part1 - setup: https://youtu.be/KlOV_1sI0HE
