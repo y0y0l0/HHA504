@@ -86,8 +86,11 @@ HHA504_mysql_vm_vs_managed/
   * VM: portal/console creation page, package install, service status, firewall rules/security group, MySQL prompt proving DB/table exist, and a local or bastion test
   * Managed: creation wizard summary, connection info, authorized networks/VPC, connectivity test, metrics/overview page
 * 2–4 minute **recording** (Zoom/Loom link in README) showing:
-  * Your repo
   * Running each script end-to-end (VM then Managed) and printed results
+  * gcp managed demo video link: https://youtu.be/jpHw5lkVvnI
+  * gcp vm demo video link:
+   * part1 - setup: https://youtu.be/KlOV_1sI0HE
+   * part2 - test/validation: https://youtu.be/Gfcjod2mUTE
 ---
 
 ### 5) Task A — MySQL on a VM (Self-managed)

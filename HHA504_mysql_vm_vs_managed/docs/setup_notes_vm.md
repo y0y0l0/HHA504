@@ -61,11 +61,11 @@ Upon connecting to the VM, I ensured that all necessary packages were installed 
    * Documented all steps taken during the setup process, including any challenges faced and how they were resolved.
         - Created a troubleshooting guide for common MySQL issues encountered during setup steps outlined above.
     * Noted the time taken for each step to compare with the managed MySQL setup.
-        - **Start-to-finish elapsed time**: 85 minutes
+        - **Start-to-finish elapsed time**: 55 minutes
         - **Time taken for each step**:
             - VM Provisioning: 10 minutes
             - MySQL Installation and Configuration: 15 minutes
-            - Testing and Troubleshooting: 60 minutes
+            - Testing and Troubleshooting: 30 minutes
     * Summarized lessons learned regarding MySQL configuration, remote access, and troubleshooting connection issues.
         - Importance of proper firewall and network settings for remote access.
         - Importance of proper databsase user privileges for user access.
