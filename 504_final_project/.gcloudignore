@@ -1,0 +1,25 @@
+# Don't ignore the data folder - we need it!
+
+# Standard ignores
+.git
+.gitignore
+.pytest_cache
+__pycache__
+*.pyc
+*.pyo
+.env
+.venv
+venv/
+node_modules/
+.DS_Store
+
+# Old/deprecated files to ignore
+cloud_function_requirements.txt
+cloud_function.py
+app/
+server.py
+buildpacks.toml
+
+# But DO include these folders
+!data/
+!data/**
